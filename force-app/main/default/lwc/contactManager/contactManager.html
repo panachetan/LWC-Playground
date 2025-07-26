@@ -1,0 +1,28 @@
+<template>
+    <lightning-card title={title} icon-name="standard:contact">
+        <div class="slds-p-horizontal_small">
+            <lightning-input
+                label="Search Contacts"
+                placeholder="Enter name..."
+                onchange={handleSearchInput}>
+            </lightning-input>
+ 
+            <template if:true={contacts}>
+                <p class="slds-m-top_medium">
+                    Total Contacts: {totalContacts}
+                </p>
+                <lightning-datatable
+                    key-field="Id"
+                    data={contacts}
+                    columns={columns}
+                    hide-checkbox-column="true"
+                    class="slds-m-top_small">
+                </lightning-datatable>
+            </template>
+ 
+            <template if:true={error}>
+                <p class="slds-text-color_error">Error loading contacts</p>
+            </template>
+        </div>
+    </lightning-card>
+</template>

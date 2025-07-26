@@ -1,0 +1,12 @@
+<template>
+    <lightning-combobox
+            name="show options"
+            label="Options"
+            value={selectedOption}
+            placeholder="Select Options"
+            options={options}
+            onchange={handleChange} ></lightning-combobox>
+
+    <p>Selected value is: {selectedOption}</p>
+    <c-practice-child-compo selected-option={selectedOption}></c-practice-child-compo>
+</template>

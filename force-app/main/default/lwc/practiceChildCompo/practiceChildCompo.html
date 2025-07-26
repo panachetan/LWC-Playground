@@ -1,0 +1,15 @@
+<template>
+    <lightning-card>
+        <template if:true={showName}>
+            <lightning-input label="Name" placeholder="Please enter name" value={Name}></lightning-input>
+        </template>
+        {showPhone}
+        <template if:true={showPhone}>
+            <lightning-input label="Phone" placeholder="Please enter phone" value={Phone}></lightning-input>
+        </template>
+        {showEmail}
+        <template if:true={showEmail}>
+            <lightning-input label="Email" placeholder="Please enter Email" value={Email}></lightning-input>
+        </template>
+    </lightning-card>
+</template>

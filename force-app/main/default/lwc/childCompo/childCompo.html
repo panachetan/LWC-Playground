@@ -1,0 +1,33 @@
+<template>
+  =========ChildComponent============<br>
+  ValueFromParent={inputValueFromParent}
+  <template if:true={showNameField}>
+    <lightning-input label="Name" type="text" placeholder="Dont Input Name"></lightning-input>
+  </template>
+  <template if:true={showPhoneField}>
+    <lightning-input label="Phone" type="text" placeholder="Dont Input Phone"></lightning-input>
+  </template>
+  <template if:true={showEmailField}>
+    <lightning-input label="Email" type="text" placeholder="Dont Input Email"></lightning-input>
+  </template>
+    <!-- <h1>Child compo</h1>
+    <template if:true={showValue}>
+        <div class="slds-m-vertical_medium">These are the details!</div>
+      </template> -->
+      <!-- <lightning-input type="text" label="Enter Input in child"  value={storeInputValue} onkeyup={handleKeyPress}></lightning-input>
+      <lightning-combobox 
+        name="progress" 
+       label="Status" 
+       value={value} 
+       placeholder="Select Progress" 
+       options={options}
+       onchange={handleChange}></lightning-combobox>
+
+       <div style="height: 300px;">
+        <lightning-datatable
+                key-field="id"
+                data={accounts}
+                columns={columns}>
+        </lightning-datatable>
+    </div> -->
+</template>

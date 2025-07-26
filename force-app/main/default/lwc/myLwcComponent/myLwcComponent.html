@@ -1,0 +1,39 @@
+<template>
+    <lightning-card>
+        <div class="slds-p-around_small">
+            Hi May Name is {name} and my age is {age}
+            <lightning-input type="text" label="enter name" onkeyup={updateNameHandler}></lightning-input>
+       </div>
+    </lightning-card>
+    <lightning-card>
+        <div class="slds-p-around_small">
+            Hi My adress is {adress.city}
+            <lightning-input type="text" label="enter adress" onkeyup={updateAdressHandler}></lightning-input>
+        </div>
+     </lightning-card>
+     <lightning-card label="Getter Property card">
+        <div class="slds-p-around_small">
+            <div>user name is {usersName}</div>
+            <div>the {num1} and {num2} multiplatication is {multiplication}</div>
+        </div>
+     </lightning-card>
+     <lightning-card title="conditional rendering">
+        <div class="slds-p-around_small">
+            <lightning-button variant="brand" label="show details" onclick={showDetailsHandler}></lightning-button>
+            <template if:true={isVisible} >
+                <div>you are late</div>
+            </template>
+            <template if:false={isVisible} >
+                <div>interview is delayed, please click the button</div>
+            </template>
+        </div>
+     </lightning-card>
+     <lightning-card title="conditional rendering">
+        <div class="slds-p-around_small">
+            <lightning-input type="text" label="enter helllo" onchange={changeHandler}></lightning-input>
+            <template if:true={nameIsCorrect}>
+                <div>chetan you typed well</div>
+            </template>
+        </div>
+     </lightning-card>
+</template>

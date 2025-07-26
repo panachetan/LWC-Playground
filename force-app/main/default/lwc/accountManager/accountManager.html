@@ -1,0 +1,27 @@
+<template>
+    <lightning-card title={title} icon-name="standard:account">
+        <div class="slds-p-horizontal_small">
+            <lightning-input
+            label = 'Search Account'
+            placeholder = 'please enter account name'
+            onchange ={handlechange}>
+            </lightning-input>
+
+            <template if:true={accounts}>
+                <p class="slds-m-top_medium">
+                    Count of Accounts={accountCount}
+                </p>
+            </template>
+
+            <lightning-datatable
+                key-field="Id"
+                data={accounts}
+                columns={columns}>
+            </lightning-datatable>
+
+            <template if:true={error}>
+                <p class="slds-text-color_error">Error Loading Accounts</p>
+            </template>
+        </div>
+    </lightning-card>
+</template>

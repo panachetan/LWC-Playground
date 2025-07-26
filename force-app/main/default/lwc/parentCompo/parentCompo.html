@@ -1,0 +1,20 @@
+<template>
+    <lightning-card title="Parent Compo">
+        <div class="slds-m-left_small slds-m-right_small slds-m-top_small slds-m-bottom_small">
+        <!-- <lightning-button label="change message from parent" variant="Brand" onclick={handleClick}></lightning-button><br>
+            <lightning-input type="text" label="Enter Input in parent" onkeyup={handleKeyPress}></lightning-input>
+            <lightning-slider label="Volume" value={val} onchange={handleSliderChange}></lightning-slider>
+            <lightning-input type="checkbox" label="Basic option" name="input1" checked={checkboxValue} onclick={handleCheckboxChange}></lightning-input>
+            <c-child-Compo pass-value-to-child={checkboxValue}></c-child-Compo> -->
+            <lightning-combobox
+            name="progress"
+            label="Input"
+            value={value}
+            placeholder="Select Input"
+            options={options}
+            onchange={handleChange}></lightning-combobox>
+            <!-- <lightning-button label="Get Account Details" variant="brand" onclick={getAccountDetails}></lightning-button> -->
+            <c-child-Compo input-value-from-parent={storeInputValue}></c-child-Compo>
+        </div>
+    </lightning-card>
+</template>
